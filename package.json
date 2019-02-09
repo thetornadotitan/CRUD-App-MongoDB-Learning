@@ -1,0 +1,28 @@
+{
+  "name": "crudmen",
+  "version": "1.0.0",
+  "description": "CRUD app built with NodeJS Express and MongoDB",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "CRUD",
+    "NodeJS",
+    "Express",
+    "MongoDB",
+    "nosql"
+  ],
+  "author": "Isaac Hisey, TheTornadoTitan",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "express-basic-auth": "^1.1.6",
+    "mongodb": "^3.1.13",
+    "path": "^0.12.7"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.9"
+  }
+}

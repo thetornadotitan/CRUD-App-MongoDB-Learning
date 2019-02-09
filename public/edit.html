@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>CRUD Edit PAge</title>
+
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" type="text/css" media="screen" href="/main.css" />
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+            integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+        <script defer src="/edit.js"></script>
+        <script defer src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+        <script defer src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+            crossorigin="anonymous"></script>
+        <script defer src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+            crossorigin="anonymous"></script>
+    </head>
+
+    <body>
+        <div class="container">
+            <button class="btn btn-primary" data-toggle="collapse" href="#createCollapse" role="button" aria-expanded="false"
+                aria-controls="createCollapse">Open Create</button>
+
+            <div class="row">
+                <div class="col">
+                    <div class="collapse multi-collapse" id="createCollapse">
+                        <div class="card card-body">
+                            <form id='newGameForm' method="POST" action="">
+                                <div class="form-group">
+                                    <label for="gameName">Game Name:</label>
+                                    <input type="text" class="form-control" id="gameName" aria-describedby="gameNameHelp"
+                                        placeholder="Final Fantasy I" required>
+                                    <small id="gameNameHelp" class="form-text text-muted">Enter the name of the game to
+                                        add.</small>
+                                </div>
+                                <div class="form-group">
+                                    <label for="originalPlatform">Original Platform</label>
+                                    <input type="text" class="form-control" id="originalPlatform" aria-describedby="originalPlatformHelp"
+                                        placeholder="NES" required>
+                                    <small id="originalPlatformHelp" class="form-text text-muted">Enter the most
+                                        commonly used abbreviation for the original system this game was release on.</small>
+                                </div>
+                                <div class="form-group">
+                                    <label for="rating">Rating</label>
+                                    <input type="number" class="form-control" id="rating" aria-describedby="ratingHelp"
+                                        placeholder="5" min="1" max="5" required>
+                                    <small id="ratingHelp" class="form-text text-muted">Enter a rating out of 5 with a
+                                        minimum of 1</small>
+                                </div>
+                                <div class="form-group">
+                                    <label for="review">Review</label>
+                                    <textarea class="form-control" id="review" placeholder="It was alright"></textarea>
+                                </div>
+                                <button type='submit' id="gameSubmit" class="btn btn-primary">Submit</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id='cardHolder'>
+
+            </div>
+        </div>
+
+
+    </body>
+
+</html>
